@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, rgba(239, 213, 78, 1), rgba(245, 151, 26, 1));
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0; 
+}
+  
+.suggestions {
+    display: inline-block;
+    position: relative;
+}
+   
+#fruit {
+    background-color: rgba(253, 211, 94, 1);
+    padding: 10px;
+    width: 300px;
+    font-size: 16;
+    border: 1px solid rgba(0,0,0,0);
+    border-radius: 1px;
+}
+  
+.menu {
+    position: absolute;
+    width: 320px;
+    background-color: rgba(253, 211, 94, 1);
+    border: 1px solid rgba(0,0,0,0);
+    border-radius: 1px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 147px;
+    overflow-y: scroll;
+    display: none;
+    z-index: 1;
+}
+  
+#list li{
+    padding: 5px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+  
+#list li:last-child {
+    border-bottom: none;
+}
+  
+#list li:hover {
+    background-color: rgba(250, 137, 54, 1);
+}
+  
+#fruit:focus + .suggestions {
+    display: block;
+}
+  
+::-webkit-scrollbar {
+    width: 0;
+}
+  
